@@ -1,0 +1,180 @@
+/* botão darkmode */
+body{
+    background: #2b2b2b;
+    transition: .5s;
+}
+
+header{
+    padding: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: top; 
+}
+
+body.ativado{
+    background: #f8f8f8;
+}
+
+#toggle{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 50px;
+    border-radius: 160px;
+    background: #222;
+    transition: .5s;
+    cursor: pointer;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+                inset 0 8px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#toggle.ativado{
+    background: #fff;
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+                inset 0 2px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#toggle .indicador{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 50%;
+    transform: scale(.9);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+                inset 0 4px 4px rgba(255, 255, 255, 0.2),
+                inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+    transition: .5s;
+
+}
+
+#toggle.ativado .indicador{
+    left: 50px;
+    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+    box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.1),
+                inset 0 4px 4px rgba(214, 214, 214, 0.7),
+                inset 0 -4px 4px rgba(201, 199, 199, .7);
+}
+
+           
+/* calculadora */
+
+.fundo{
+    display: flex;
+    justify-content: center;
+    /* padding-top: 150px; */
+    align-items: center;
+}
+
+#calculadora{
+    background-color: #222;
+    border-radius: 15px;
+    padding: 14px;
+    box-shadow: 0px 2px 8px #0a0a0a,
+                0px -2px 8px #858383;
+}
+
+.botao{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    background: #171717;
+    color: #eaeaea;
+    box-shadow: 0px 2px 8px #0a0a0a,
+                0px -2px 8px #858383;
+}
+
+.botao:hover{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: .3s;
+}
+
+#resultado{
+    margin: 10px 5px;
+    width: absolute;
+    height: 50px;
+    background-color: #171717;
+    padding: 10px;
+    color: #fff;
+    font-size: 25px;
+    text-align: right;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px #0a0a0a,
+                0px -2px 8px #858383;
+}
+
+#calculadora.ativado{
+    background-color:rgb(233, 233, 233);
+    box-shadow: 0px 2px 8px #474343,
+                0px -2px 8px #fff;
+}
+
+#calculadora.ativado #resultado{
+    background-color: #eaeaea;
+    box-shadow: 0px 2px 8px #474343,
+                0px -2px 8px #fff;
+    color: #0a0a0a;
+}
+
+#calculadora.ativado .botao{
+    color: #171717;
+    background-color: #eaeaea;
+    box-shadow: 0px 2px 8px #474343,
+                0px -2px 8px #fff;
+}
+
+#calculadora.ativado .botao:hover{
+    color: #171717;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+#rodape{
+    color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 13px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 15px;
+    width: 285px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 2px 8px #0a0a0a,
+                0px -2px 8px #858383;
+}
+
+.git{
+    color: #eaeaea;
+}
+
+.git:hover{
+    color: rgba(214, 214, 214, 0.7);
+    transition: .3s;
+}
+
+#rodape.ativado{
+    color: #0a0a0a;
+    background-color:rgb(233, 233, 233);
+    box-shadow: 0px 2px 8px #474343,
+                0px -2px 8px #fff;
+}
+
+#rodape.ativado .git{
+    color: #0a0a0a;
+}
+
+#rodape.ativado .git:hover{
+    color: rgba(0, 0, 0, 0.5);
+}
+
